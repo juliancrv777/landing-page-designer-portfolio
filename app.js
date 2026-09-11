@@ -9,6 +9,7 @@ const copy = document.querySelector('#case-copy');
 const index = document.querySelector('.case-index');
 const role = document.querySelector('#case-role');
 const focus = document.querySelector('#case-focus');
+const caseLink = document.querySelector('#case-link');
 cards.forEach(card => card.addEventListener('click', () => {
   const project = projects[card.dataset.project];
   cards.forEach(item => item.classList.toggle('active', item === card));
@@ -17,5 +18,6 @@ cards.forEach(card => card.addEventListener('click', () => {
   copy.textContent = project.copy;
   role.textContent = project.role;
   focus.textContent = project.focus;
+  caseLink.href = `case.html?project=${card.dataset.project}`;
 }));
 
