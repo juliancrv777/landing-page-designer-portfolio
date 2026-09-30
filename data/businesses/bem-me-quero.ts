@@ -5,57 +5,78 @@ export const bemMeQuero: BusinessConfig = {
   eyebrow: "Estética & beleza · Quartier · Pelotas, RS",
   headline: "Cuidar de si também é se escolher.",
   subheadline:
-    "Um conceito de presença digital inspirado em uma clínica criada para acolher, fortalecer a autoestima e valorizar a beleza genuína de cada mulher.",
+    "Uma proposta visual que reúne estética facial, corporal e cuidados de beleza em uma experiência leve, acolhedora e fácil de agendar.",
   city: "Três Vendas · Pelotas · RS",
   whatsapp: "5553991229822",
   rating: "5.0",
   reviewCount: 1,
+  reviewSource: "avaliação pública",
   yearsLabel: "duas irmãs, um propósito",
   primaryCta: "Agendar atendimento",
   heroImage:
-    "https://images.pexels.com/photos/3764014/pexels-photo-3764014.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/29648640/pexels-photo-29648640.jpeg?auto=compress&cs=tinysrgb&w=1600",
   experienceImage:
-    "https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/5128263/pexels-photo-5128263.jpeg?auto=compress&cs=tinysrgb&w=1600",
   experienceLabel: "história Bem Me Quero",
   treatmentHeadline: "Beleza real. Cuidado por inteiro.",
   treatmentIntro:
-    "Facial, corporal, sobrancelhas, lábios e bem-estar reunidos em uma experiência pensada para diferentes momentos e objetivos.",
-  experienceHeadline: "Um espaço que nasceu do cuidado entre mulheres.",
+    "Cada serviço aparece com uma imagem correspondente ao que realmente está sendo proposto — sem misturar spa, procedimento facial e sobrancelhas como se fossem a mesma coisa.",
+  journeyHeadline: "Escolha o cuidado. A gente organiza o caminho.",
+  journeyIntro:
+    "A navegação foi pensada para uma cliente que pode chegar buscando pele, sobrancelhas, harmonização ou bem-estar e precisa entender rapidamente onde clicar.",
+  journeySteps: [
+    {
+      title: "Escolha o objetivo",
+      description:
+        "Facial, corporal, olhar ou harmonização: a pessoa identifica rápido o que procura.",
+    },
+    {
+      title: "Entenda o serviço",
+      description:
+        "Cada tratamento ganha descrição curta, visual específico e expectativa mais clara.",
+    },
+    {
+      title: "Agende pelo WhatsApp",
+      description:
+        "O caminho termina em contato direto, sem formulários longos ou etapas desnecessárias.",
+    },
+  ],
+  experienceHeadline: "Uma marca de cuidado merece uma experiência coerente.",
   experienceText:
-    "A história pública da Bem Me Quero fala de duas irmãs, formações diferentes e um propósito em comum: transformar cuidado, autoestima e bem-estar em uma experiência acolhedora.",
+    "A Bem Me Quero trabalha com frentes diferentes de beleza. Por isso, a página precisa parecer uma clínica de estética completa — não um consultório de injetáveis nem um spa genérico.",
   experiencePoints: [
     "Estética facial",
     "Estética corporal",
     "Sobrancelhas e cílios",
-    "Harmonização e bem-estar",
+    "Harmonização e beleza",
   ],
-  galleryHeadline: "Uma marca que pode ser sentida antes mesmo da visita.",
+  galleryHeadline: "Cada imagem deve explicar um serviço.",
   galleryNote:
-    "Estas imagens são ilustrativas. A versão final pode usar fotos oficiais da clínica, equipe, ambiente e resultados autorizados.",
-  reviewsHeadline: "Uma presença digital à altura da experiência presencial.",
-  ctaHeadline: "Seu próximo momento de cuidado pode começar por aqui.",
+    "As imagens seguem uma lógica editorial: pele para facial, sobrancelhas para olhar e massagem/corpo para bem-estar. Na versão final, entrariam fotos oficiais da clínica.",
+  reviewsHeadline: "Uma presença digital para transformar variedade em clareza.",
+  ctaHeadline: "Encontre o cuidado que combina com o seu momento.",
   gallery: [
     {
-      src: "https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      alt: "Atendimento estético feminino",
+      src: "https://images.pexels.com/photos/7446669/pexels-photo-7446669.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Análise de pele em atendimento estético",
     },
     {
-      src: "https://images.pexels.com/photos/3997386/pexels-photo-3997386.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      alt: "Procedimento de beleza e cuidado",
+      src: "https://images.pexels.com/photos/5128277/pexels-photo-5128277.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Procedimento profissional de sobrancelhas",
     },
     {
-      src: "https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      alt: "Ambiente de beleza acolhedor",
+      src: "https://images.pexels.com/photos/6663364/pexels-photo-6663364.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Cuidado corporal em ambiente de estética e bem-estar",
     },
   ],
   services: [
     {
       title: "Estética facial",
       description:
-        "Limpeza de pele, rejuvenescimento, tratamentos clareadores e protocolos pensados para a saúde e aparência da pele.",
-      tag: "Cuidado facial",
+        "Limpeza de pele, rejuvenescimento e protocolos voltados à saúde, textura e aparência da pele.",
+      tag: "Pele",
       image:
-        "https://images.pexels.com/photos/4586753/pexels-photo-4586753.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/7446669/pexels-photo-7446669.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       title: "Botox & preenchimento",
@@ -63,23 +84,23 @@ export const bemMeQuero: BusinessConfig = {
         "Procedimentos voltados à valorização dos traços, com proposta de equilíbrio e resultado compatível com cada pessoa.",
       tag: "Harmonização",
       image:
-        "https://images.pexels.com/photos/4586745/pexels-photo-4586745.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/4586708/pexels-photo-4586708.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       title: "Sobrancelhas & cílios",
       description:
         "Cuidados para valorizar o olhar, incluindo design, micropigmentação e serviços de beleza personalizados.",
-      tag: "Expressão",
+      tag: "Olhar",
       image:
-        "https://images.pexels.com/photos/3764014/pexels-photo-3764014.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/5128263/pexels-photo-5128263.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       title: "Estética corporal",
       description:
-        "Protocolos para bem-estar, redução de medidas, gordura localizada e outros objetivos estéticos corporais.",
-      tag: "Bem-estar",
+        "Protocolos corporais e momentos de cuidado voltados a bem-estar e diferentes objetivos estéticos.",
+      tag: "Corpo",
       image:
-        "https://images.pexels.com/photos/6560341/pexels-photo-6560341.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/6663364/pexels-photo-6663364.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
   ],
   testimonials: [
@@ -103,8 +124,8 @@ export const bemMeQuero: BusinessConfig = {
     },
   ],
   stats: [
-    { value: "5.0/5", label: "avaliação pública encontrada" },
-    { value: "2 irmãs", label: "uma história de propósito" },
-    { value: "Quartier", label: "Três Vendas · Pelotas" },
+    { value: "Facial", label: "tratamentos de pele" },
+    { value: "Olhar", label: "sobrancelhas e cílios" },
+    { value: "Corpo", label: "estética e bem-estar" },
   ],
 };
