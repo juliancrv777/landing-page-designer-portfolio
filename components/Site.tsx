@@ -3,9 +3,9 @@ import type { BusinessConfig } from "@/data/business";
 
 function whatsappLink(phone: string, brand: string) {
   const message = encodeURIComponent(
-    `Olá! Vi o site da ${brand} e gostaria de agendar uma avaliação.`
+    "Olá! Vi o site da " + brand + " e gostaria de agendar uma avaliação."
   );
-  return `https://wa.me/${phone}?text=${message}`;
+  return "https://wa.me/" + phone + "?text=" + message;
 }
 
 export function Site({ business }: { business: BusinessConfig }) {
@@ -21,6 +21,7 @@ export function Site({ business }: { business: BusinessConfig }) {
           <nav className="hidden items-center gap-7 text-sm text-black/60 md:flex">
             <a className="transition hover:text-black" href="#tratamentos">Tratamentos</a>
             <a className="transition hover:text-black" href="#experiencia">Experiência</a>
+            <a className="transition hover:text-black" href="#galeria">Galeria</a>
             <a className="transition hover:text-black" href="#avaliacoes">Avaliações</a>
           </nav>
           <a
@@ -72,9 +73,15 @@ export function Site({ business }: { business: BusinessConfig }) {
           </div>
 
           <Reveal delay={0.16} className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2.4rem] border border-white/60 bg-[radial-gradient(circle_at_35%_20%,rgba(255,255,255,.95),transparent_24%),linear-gradient(145deg,#d6b7a4_0%,#b58d7b_42%,#758d82_100%)] shadow-[0_35px_90px_rgba(51,49,45,.18)]">
-              <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent_20%,rgba(255,255,255,.18)_50%,transparent_80%)]" />
-              <div className="absolute bottom-5 left-5 right-5 rounded-[1.8rem] border border-white/30 bg-white/15 p-5 text-white backdrop-blur-xl">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2.4rem] border border-white/60 bg-[#d8c0ae] shadow-[0_35px_90px_rgba(51,49,45,.18)]">
+              <img
+                src={business.heroImage}
+                alt="Atendimento estético em clínica premium"
+                className="h-full w-full object-cover"
+                fetchPriority="high"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#203d35]/35 via-transparent to-white/5" />
+              <div className="absolute bottom-5 left-5 right-5 rounded-[1.8rem] border border-white/30 bg-[#203d35]/20 p-5 text-white backdrop-blur-xl">
                 <div className="flex items-end justify-between gap-4">
                   <div>
                     <p className="text-xs uppercase tracking-[.22em] text-white/70">Experiência</p>
@@ -82,12 +89,10 @@ export function Site({ business }: { business: BusinessConfig }) {
                   </div>
                   <div className="text-right">
                     <p className="text-3xl font-semibold">{business.rating}</p>
-                    <p className="text-xs text-white/70">★★★★★ · {business.reviewCount} avaliações</p>
+                    <p className="text-xs text-white/80">★★★★★ · {business.reviewCount} avaliações</p>
                   </div>
                 </div>
               </div>
-              <div className="absolute left-7 top-7 h-16 w-16 rounded-full border border-white/30 bg-white/10 backdrop-blur-md" />
-              <div className="absolute right-10 top-24 h-36 w-36 rounded-full border border-white/20 bg-[#f7e7df]/10" />
             </div>
           </Reveal>
         </div>
@@ -118,17 +123,28 @@ export function Site({ business }: { business: BusinessConfig }) {
             </p>
           </Reveal>
 
-          <div className="mt-12 grid gap-4 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
             {business.services.map((service, index) => (
-              <Reveal key={service.title} delay={index * 0.08}>
-                <article className="group flex min-h-80 flex-col justify-between rounded-[2rem] border border-black/8 bg-[#eeebe5] p-7 transition duration-500 hover:-translate-y-2 hover:bg-[#e8e2da]">
-                  <div className="flex items-start justify-between gap-4">
-                    <span className="rounded-full border border-black/10 px-3 py-1 text-xs text-black/50">{service.tag}</span>
-                    <span className="text-2xl text-black/30 transition group-hover:rotate-45 group-hover:text-black">↗</span>
+              <Reveal key={service.title} delay={index * 0.07}>
+                <article className="group overflow-hidden rounded-[2rem] border border-black/8 bg-[#eeebe5] transition duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(49,45,40,.12)]">
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.045]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+                    <span className="absolute left-5 top-5 rounded-full border border-white/35 bg-white/75 px-3 py-1 text-xs text-[#203d35] backdrop-blur">
+                      {service.tag}
+                    </span>
                   </div>
-                  <div>
-                    <h3 className="font-serif text-4xl leading-none tracking-tight">{service.title}</h3>
-                    <p className="mt-5 leading-7 text-black/55">{service.description}</p>
+                  <div className="flex min-h-56 flex-col justify-between p-7">
+                    <div className="flex items-start justify-between gap-6">
+                      <h3 className="font-serif text-4xl leading-none tracking-tight md:text-5xl">{service.title}</h3>
+                      <span className="text-2xl text-black/30 transition group-hover:rotate-45 group-hover:text-black">↗</span>
+                    </div>
+                    <p className="mt-8 max-w-xl leading-7 text-black/55">{service.description}</p>
                   </div>
                 </article>
               </Reveal>
@@ -138,31 +154,91 @@ export function Site({ business }: { business: BusinessConfig }) {
       </section>
 
       <section id="experiencia" className="bg-[#203d35] px-5 py-24 text-white md:px-8 md:py-32">
-        <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2 lg:items-end">
+        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.95fr_1.05fr] lg:items-center">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-[.26em] text-white/55">Nossa forma de cuidar</p>
-            <h2 className="mt-5 font-serif text-5xl leading-[.92] tracking-[-.04em] md:text-7xl">
-              Tecnologia sem perder o humano.
-            </h2>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div className="space-y-7 text-lg leading-8 text-white/66">
-              <p>
-                A jornada foi desenhada para transmitir confiança antes mesmo da primeira consulta: atendimento claro, ambiente acolhedor e decisões baseadas no que faz sentido para você.
-              </p>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {["Avaliação individual", "Protocolos sob medida", "Acompanhamento", "Resultados naturais"].map((item) => (
-                  <div key={item} className="rounded-2xl border border-white/12 bg-white/5 p-4 text-sm text-white/80">
-                    ✓ {item}
-                  </div>
-                ))}
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2.3rem] border border-white/10">
+              <img
+                src={business.experienceImage}
+                alt="Ambiente sofisticado de clínica"
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#203d35]/45 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs uppercase tracking-[.2em] backdrop-blur-md">
+                experiência Maison Aura
               </div>
             </div>
           </Reveal>
+
+          <div>
+            <Reveal>
+              <p className="text-xs font-semibold uppercase tracking-[.26em] text-white/55">Nossa forma de cuidar</p>
+              <h2 className="mt-5 font-serif text-5xl leading-[.92] tracking-[-.04em] md:text-7xl">
+                Tecnologia sem perder o humano.
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="mt-8 space-y-7 text-lg leading-8 text-white/66">
+                <p>
+                  A jornada foi desenhada para transmitir confiança antes mesmo da primeira consulta: atendimento claro, ambiente acolhedor e decisões baseadas no que faz sentido para você.
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {["Avaliação individual", "Protocolos sob medida", "Acompanhamento", "Resultados naturais"].map((item) => (
+                    <div key={item} className="rounded-2xl border border-white/12 bg-white/5 p-4 text-sm text-white/80">
+                      ✓ {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
-      <section id="avaliacoes" className="px-5 py-24 md:px-8 md:py-32">
+      <section id="galeria" className="px-5 py-24 md:px-8 md:py-32">
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[.26em] text-[#416259]">Atmosfera</p>
+                <h2 className="mt-5 max-w-4xl font-serif text-5xl leading-[.95] tracking-[-.04em] md:text-7xl">
+                  Cuidado que também aparece nos detalhes.
+                </h2>
+              </div>
+              <p className="max-w-md text-base leading-7 text-black/50">
+                Imagens ilustrativas da proposta visual. Em um projeto real, esta área recebe as fotos oficiais do estabelecimento.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-12 grid gap-4 md:grid-cols-[1.15fr_.85fr]">
+            <Reveal className="md:row-span-2">
+              <div className="group h-full min-h-[32rem] overflow-hidden rounded-[2rem]">
+                <img
+                  src={business.gallery[0].src}
+                  alt={business.gallery[0].alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                />
+              </div>
+            </Reveal>
+            {business.gallery.slice(1).map((image, index) => (
+              <Reveal key={image.src} delay={(index + 1) * 0.08}>
+                <div className="group aspect-[16/9] overflow-hidden rounded-[2rem]">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                  />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="avaliacoes" className="px-5 pb-24 md:px-8 md:pb-32">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
@@ -172,7 +248,7 @@ export function Site({ business }: { business: BusinessConfig }) {
                   Confiança construída atendimento por atendimento.
                 </h2>
               </div>
-              <div className="shrink-0 text-right">
+              <div className="shrink-0 rounded-[1.5rem] border border-black/8 bg-white/60 px-6 py-4 text-right">
                 <p className="text-4xl font-semibold">{business.rating}</p>
                 <p className="mt-1 text-sm text-black/45">★★★★★ · Google</p>
               </div>
@@ -182,7 +258,7 @@ export function Site({ business }: { business: BusinessConfig }) {
           <div className="mt-12 grid gap-4 lg:grid-cols-3">
             {business.testimonials.map((testimonial, index) => (
               <Reveal key={testimonial.name} delay={index * 0.08}>
-                <blockquote className="flex min-h-72 flex-col justify-between rounded-[2rem] border border-black/8 bg-white/55 p-7">
+                <blockquote className="flex min-h-72 flex-col justify-between rounded-[2rem] border border-black/8 bg-white/65 p-7 shadow-[0_18px_50px_rgba(49,45,40,.06)]">
                   <div>
                     <p className="text-sm tracking-[.18em] text-[#816855]">★★★★★</p>
                     <p className="mt-6 font-serif text-2xl leading-9">“{testimonial.quote}”</p>
