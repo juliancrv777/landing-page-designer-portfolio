@@ -11,6 +11,16 @@ export type BusinessConfig = {
   primaryCta: string;
   heroImage: string;
   experienceImage: string;
+  experienceLabel?: string;
+  treatmentHeadline?: string;
+  treatmentIntro?: string;
+  experienceHeadline?: string;
+  experienceText?: string;
+  experiencePoints?: string[];
+  galleryHeadline?: string;
+  galleryNote?: string;
+  reviewsHeadline?: string;
+  ctaHeadline?: string;
   gallery: Array<{ src: string; alt: string }>;
   services: Array<{
     title: string;

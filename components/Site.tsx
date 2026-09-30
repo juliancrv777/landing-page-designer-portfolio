@@ -43,6 +43,28 @@ function WhatsAppIcon({ className = "h-6 w-6" }: { className?: string }) {
 
 export function Site({ business }: { business: BusinessConfig }) {
   const cta = whatsappLink(business.whatsapp, business.brand);
+  const treatmentHeadline = business.treatmentHeadline ?? "{treatmentHeadline}";
+  const treatmentIntro =
+    business.treatmentIntro ??
+    "{treatmentIntro}";
+  const experienceLabel = business.experienceLabel ?? "experiência " + business.brand;
+  const experienceHeadline =
+    business.experienceHeadline ?? "{experienceHeadline}";
+  const experienceText =
+    business.experienceText ??
+    "{experienceText}";
+  const experiencePoints =
+    business.experiencePoints ??
+    ["Avaliação individual", "Protocolos sob medida", "Acompanhamento", "Resultados naturais"];
+  const galleryHeadline =
+    business.galleryHeadline ?? "{galleryHeadline}";
+  const galleryNote =
+    business.galleryNote ??
+    "{galleryNote}";
+  const reviewsHeadline =
+    business.reviewsHeadline ?? "{reviewsHeadline}";
+  const ctaHeadline =
+    business.ctaHeadline ?? "{ctaHeadline}";
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#f7f4ef] text-[#1f211f]">
@@ -207,7 +229,7 @@ export function Site({ business }: { business: BusinessConfig }) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#203d35]/45 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs uppercase tracking-[.2em] backdrop-blur-md">
-                experiência Maison Aura
+                {experienceLabel}
               </div>
             </div>
           </Reveal>
@@ -225,7 +247,7 @@ export function Site({ business }: { business: BusinessConfig }) {
                   A jornada foi desenhada para transmitir confiança antes mesmo da primeira consulta: atendimento claro, ambiente acolhedor e decisões baseadas no que faz sentido para você.
                 </p>
                 <div className="grid gap-4 sm:grid-cols-2">
-                  {["Avaliação individual", "Protocolos sob medida", "Acompanhamento", "Resultados naturais"].map((item) => (
+                  {experiencePoints.map((item) => (
                     <div key={item} className="rounded-2xl border border-white/12 bg-white/5 p-4 text-sm text-white/80">
                       ✓ {item}
                     </div>
