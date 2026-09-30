@@ -3,49 +3,70 @@ import type { BusinessConfig } from "@/data/business";
 export const bellitia: BusinessConfig = {
   brand: "Bellitia",
   eyebrow: "Estética & bem-estar · Centro · Pelotas, RS",
-  headline: "Um lugar para sair mais leve.",
+  headline: "Estética com espaço para respirar.",
   subheadline:
-    "Uma experiência digital inspirada no que as clientes já descrevem: acolhimento, cuidado, profissionalismo e um momento para si.",
+    "Uma experiência digital que combina procedimentos faciais e bem-estar sem misturar linguagem clínica com imagens de spa de forma aleatória.",
   city: "Centro · Pelotas · RS",
   whatsapp: "5553981620088",
   rating: "4.9",
   reviewCount: 61,
+  reviewSource: "Google",
   yearsLabel: "7+ anos de cuidado",
   primaryCta: "Falar no WhatsApp",
   heroImage:
-    "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/5659008/pexels-photo-5659008.jpeg?auto=compress&cs=tinysrgb&w=1600",
   experienceImage:
-    "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/4586740/pexels-photo-4586740.jpeg?auto=compress&cs=tinysrgb&w=1600",
   experienceLabel: "experiência Bellitia",
-  treatmentHeadline: "Estética que também é pausa.",
+  treatmentHeadline: "Do procedimento ao bem-estar, cada coisa no seu lugar.",
   treatmentIntro:
-    "Uma combinação de procedimentos estéticos e cuidado corporal com foco em naturalidade, bem-estar e atendimento próximo.",
-  experienceHeadline: "Profissionalismo com clima de acolhimento.",
+    "A Bellitia reúne frentes diferentes. O design agora separa visualmente a parte clínica da parte de relaxamento para a marca parecer mais coerente.",
+  journeyHeadline: "Uma jornada simples, sem ruído.",
+  journeyIntro:
+    "A pessoa entende se está buscando harmonização, pele ou bem-estar e chega ao WhatsApp com mais clareza sobre o que quer conversar.",
+  journeySteps: [
+    {
+      title: "Descubra",
+      description:
+        "Os serviços são apresentados por objetivo e com imagens compatíveis com cada categoria.",
+    },
+    {
+      title: "Entenda",
+      description:
+        "Textos curtos explicam a proposta sem transformar a página em um catálogo cansativo.",
+    },
+    {
+      title: "Converse",
+      description:
+        "O CTA leva direto ao WhatsApp para combinar avaliação, disponibilidade e próximo passo.",
+    },
+  ],
+  experienceHeadline: "Profissionalismo sem perder acolhimento.",
   experienceText:
-    "As avaliações públicas destacam uma clínica aconchegante, leve e cuidadosa. A proposta desta prévia é transformar essa sensação em uma presença digital tão agradável quanto a experiência presencial.",
+    "A proposta visual equilibra dois lados da marca: estética facial com linguagem mais clínica e massagens com linguagem de bem-estar. Isso evita a sensação de site genérico.",
   experiencePoints: [
     "Atendimento acolhedor",
-    "Massagens e bem-estar",
     "Harmonização facial",
-    "Resultados equilibrados",
+    "Cuidado com a pele",
+    "Massagens e bem-estar",
   ],
-  galleryHeadline: "Uma experiência que começa antes de entrar pela porta.",
+  galleryHeadline: "Clínica quando precisa ser clínica. Relaxamento quando precisa ser leve.",
   galleryNote:
-    "Fotos ilustrativas nesta prévia. Em um projeto final, a galeria pode usar ambiente, equipe e procedimentos oficiais da Bellitia.",
+    "As imagens ilustrativas foram escolhidas por categoria. Em um projeto final, ambiente, equipe e procedimentos reais da Bellitia substituiriam o banco de imagens.",
   reviewsHeadline: "Quem conhece, fala de cuidado, leveza e confiança.",
-  ctaHeadline: "Reserve um momento para você.",
+  ctaHeadline: "Escolha o que você busca e comece pela conversa.",
   gallery: [
     {
-      src: "https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      alt: "Massagem em ambiente de bem-estar",
+      src: "https://images.pexels.com/photos/5659008/pexels-photo-5659008.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Massagem relaxante em ambiente de bem-estar",
     },
     {
-      src: "https://images.pexels.com/photos/3997988/pexels-photo-3997988.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      alt: "Cuidado facial relaxante",
+      src: "https://images.pexels.com/photos/14438369/pexels-photo-14438369.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Procedimento estético facial em ambiente clínico",
     },
     {
-      src: "https://images.pexels.com/photos/3865557/pexels-photo-3865557.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      alt: "Ambiente de spa e estética",
+      src: "https://images.pexels.com/photos/7446669/pexels-photo-7446669.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Análise de pele com equipamento profissional",
     },
   ],
   services: [
@@ -53,33 +74,33 @@ export const bellitia: BusinessConfig = {
       title: "Harmonização facial",
       description:
         "Procedimentos voltados a realçar a beleza natural com equilíbrio, planejamento e atenção às características individuais.",
-      tag: "Naturalidade",
+      tag: "Planejamento",
       image:
-        "https://images.pexels.com/photos/7581573/pexels-photo-7581573.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/13060605/pexels-photo-13060605.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       title: "Botox & preenchimento",
       description:
-        "Opções de cuidado estético facial com foco em resultados sutis e uma experiência segura e personalizada.",
-      tag: "Equilíbrio",
+        "Cuidados estéticos faciais com foco em resultados sutis, planejamento e uma experiência segura.",
+      tag: "Injetáveis",
       image:
-        "https://images.pexels.com/photos/4586745/pexels-photo-4586745.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/4586712/pexels-photo-4586712.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       title: "Bioestimuladores",
       description:
-        "Protocolos que podem integrar o planejamento estético com foco em qualidade da pele e estímulo de colágeno.",
+        "Protocolos voltados à qualidade da pele e estímulo de colágeno dentro de um planejamento estético individual.",
       tag: "Pele",
       image:
-        "https://images.pexels.com/photos/5069432/pexels-photo-5069432.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/7446678/pexels-photo-7446678.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       title: "Massagens",
       description:
-        "Um convite para desacelerar, cuidar do corpo e transformar a rotina em um momento de bem-estar.",
+        "Um momento de cuidado corporal e relaxamento para desacelerar e transformar a rotina em bem-estar.",
       tag: "Bem-estar",
       image:
-        "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "https://images.pexels.com/photos/5659008/pexels-photo-5659008.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
   ],
   testimonials: [
