@@ -1,8 +1,10 @@
 import type { BusinessConfig } from "@/data/business";
 import { maisonAura } from "@/data/businesses/maison-aura";
+import { samanthaXavier } from "@/data/businesses/samantha-xavier";
 
 export const businesses = {
   "maison-aura": maisonAura,
+  "samantha-xavier": samanthaXavier,
 } satisfies Record<string, BusinessConfig>;
 
 export type BusinessSlug = keyof typeof businesses;
