@@ -7,6 +7,7 @@ export type BusinessConfig = {
   whatsapp: string;
   rating: string;
   reviewCount: number;
+  reviewSource?: string;
   yearsLabel: string;
   primaryCta: string;
   heroImage: string;
@@ -14,6 +15,9 @@ export type BusinessConfig = {
   experienceLabel?: string;
   treatmentHeadline?: string;
   treatmentIntro?: string;
+  journeyHeadline?: string;
+  journeyIntro?: string;
+  journeySteps?: Array<{ title: string; description: string }>;
   experienceHeadline?: string;
   experienceText?: string;
   experiencePoints?: string[];
