@@ -1,6 +1,6 @@
 import { Site } from "@/components/Site";
-import { business } from "@/data/business";
+import { maisonAura } from "@/data/businesses/maison-aura";
 
 export default function Home() {
-  return <Site business={business} />;
+  return <Site business={maisonAura} />;
 }
